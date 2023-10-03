@@ -1,8 +1,10 @@
 import * as React from 'react'
+import { useState } from 'react'
 import { Select, SelectProps } from '@mui/base/Select'
 import { Option as BaseOption, OptionProps, OptionOwnerState } from '@mui/base/Option'
 import { Input } from '@mui/base/Input'
 import clsx from 'clsx'
+import SearchIcon from '@mui/icons-material/Search'
 
 const getOptionColorClasses = ({ selected, disabled }: Partial<OptionOwnerState<number>>) => {
   let classes = ''
@@ -85,8 +87,22 @@ const SetSelector = [
 ]
 
 const SearchHeader = () => {
+  const [isFocus, setIsFocus] = useState(false)
+
+  const handleInputFocus = () => {
+    setIsFocus(true)
+  }
+
+  const handleInputBlur = () => {
+    setIsFocus(false)
+  }
+
   return (
-    <div className='flex items-center outline outline-solid outline-red-500  focus:border-purple-500 focus-visible:outline-1'>
+    <div
+      className={`flex items-center border border-solid ${
+        isFocus ? 'border-[#d47559]' : 'border-[#123040]'
+      } rounded-[3px] focus:border-purple-500 focus-visible:outline-1 w-[600px]`}
+    >
       <CustomSelect defaultValue={SetSelector[0].value}>
         {SetSelector.map((item, index) => {
           return (
@@ -100,14 +116,17 @@ const SearchHeader = () => {
         })}
       </CustomSelect>
       <Input
-        className='w-96 text-sm font-sans font-normal leading-5 px-3 rounded-lg focus:outline-none focus:border-none'
+        className=' text-sm font-sans font-normal leading-5 px-3 rounded-lg'
         slotProps={{
           input: {
-            className: '',
+            className: 'w-[450px] outline-none ',
           },
         }}
         aria-label='Demo input'
         placeholder='Search Summoner Name...'
+        endAdornment={<SearchIcon fontSize='small' />}
+        onFocus={handleInputFocus}
+        onBlur={handleInputBlur}
       />
     </div>
   )
