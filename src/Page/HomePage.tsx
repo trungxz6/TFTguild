@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../Components/Header'
 import Navbar from '../Components/Navbar'
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
   return (
     <div>
       <Header />
