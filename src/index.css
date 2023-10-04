@@ -3,26 +3,35 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'BeaufortforLOL-Medium';
-  src: local('BeaufortforLOL-Medium'), url('./fonts/BeaufortforLOL-Medium.ttf') format('truetype');
+  font-family: 'BeaufortforLOL-Regular';
+  src: local('BeaufortforLOL-Regular'), url('./fonts/BeaufortforLOL-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Spiegel_TT_Regular';
+  src: local('Spiegel_TT_Regular'), url('./fonts/Spiegel_TT_Regular.ttf') format('truetype');
   font-weight: normal;
 }
 
 * {
-  --primary-clr: #d47559;
-  --bg-clr: #111111;
-  --text-clr: #fef6f3;
-  --text-highlight-clr: #ffb60d;
+  --head_font: 'BeaufortforLOL-Regular';
+  --primary_font: 'Spiegel_TT_Regular';
+
+  --primary_clr: #d47559;
+  --bg_clr: #111111;
+  --text_clr: #fef6f3;
+  --text_highlight_clr: #ffb60d;
 }
 
 #root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'BeaufortforLOL-Medium';
+  font-family: var(--primary_font);
 }
 
 body {
-  color: var(--text-clr);
-  background: var(--bg-clr);
+  color: var(--text_clr);
+  background: var(--bg_clr);
 }

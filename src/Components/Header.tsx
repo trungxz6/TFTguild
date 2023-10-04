@@ -13,7 +13,7 @@ const Header: React.FC = () => {
             src={logo}
             alt='TFTactics'
           />
-          <span className='mr-4 text-[var(--text-highlight-clr)] font-bold text-2xl'>TFT TOP 8</span>
+          <span className='mr-4 text-[var(--text-highlight-clr)] font-bold text-xl'>TFT TOP 8</span>
         </>
         <UnstyledSelectBasic />
       </div>
