@@ -1,17 +1,20 @@
 import React from 'react'
 import UnstyledSelectBasic from './Dropdown'
 import SearchHeader from './SearchHeader'
-import Button from '@mui/material/Button'
+import logo from '../assets/logo/logo.png'
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <div className='flex w-[100vw] justify-center mt-[8px]'>
       <div className='flex items-center'>
-        <img
-          className='brand h-[22px] w-[101px]'
-          src='https://rerollcdn.com/brand.svg'
-          alt='TFTactics'
-        ></img>
+        <>
+          <img
+            className='w-[60px]'
+            src={logo}
+            alt='TFTactics'
+          />
+          <span className='mr-4 text-[var(--text-highlight-clr)] font-bold text-2xl'>TFT TOP 8</span>
+        </>
         <UnstyledSelectBasic />
       </div>
       <div className='mx-[150px]'>
