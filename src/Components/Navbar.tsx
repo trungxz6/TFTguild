@@ -6,44 +6,44 @@ import { Popper } from '@mui/base/Popper'
 
 const navBarItem = [
   {
-    name: 'Team Comps',
+    name: 'TEAM COMPS',
     value: 1,
     link: '',
   },
   {
-    name: 'Meta Report',
+    name: 'META REPORT',
     value: 2,
     link: '',
   },
   {
-    name: 'Champions',
+    name: 'CHAMPIONS',
     value: 3,
     link: '',
   },
   {
-    name: 'Tier Lists',
+    name: 'TIER LISTS',
     value: 4,
     link: '',
     dropMenu: true,
   },
   {
-    name: 'Item Builder',
+    name: 'ITEM BUILDER',
     value: 5,
     link: '',
   },
   {
-    name: 'Team Builder',
+    name: 'TEAM BUILDER',
     value: 6,
     link: '',
   },
   {
-    name: 'Database',
+    name: 'DATABASE',
     value: 7,
     link: '',
     dropMenu: true,
   },
   {
-    name: 'Patch Notes',
+    name: 'PATCH NOTES',
     value: 8,
     link: '',
   },
@@ -104,13 +104,13 @@ const Navbar = () => {
                     <div
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
-                      className=' z-50 rounded-lg font-medium font-sans text-sm m-1 p-3 border border-solid border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 shadow-md text-purple-900 dark:text-purple-100'
+                      className='z-50 rounded-lg font-medium text-sm m-1 p-3 border border-solid border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 shadow-md text-purple-900 dark:text-purple-100'
                     >
                       The content of the Popper.
                     </div>
                   </Popper>
                 ) : (
-                  <>.</>
+                  ''
                 )}
               </>
             )
