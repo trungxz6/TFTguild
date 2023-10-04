@@ -15,23 +15,23 @@
 }
 
 * {
-  --head_font: 'BeaufortforLOL-Regular';
-  --primary_font: 'Spiegel_TT_Regular';
+  --head-font: 'BeaufortforLOL-Regular';
+  --primary-font: 'Spiegel_TT_Regular';
 
-  --primary_clr: #d47559;
-  --bg_clr: #111111;
-  --text_clr: #fef6f3;
-  --text_highlight_clr: #ffb60d;
+  --primary-clr: #d47559;
+  --bg-clr: #111111;
+  --text-clr: #fef6f3;
+  --text-highlight-clr: #ffb60d;
 }
 
 #root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--primary_font);
+  font-family: var(--primary-font);
 }
 
 body {
-  color: var(--text_clr);
-  background: var(--bg_clr);
+  color: var(--text-clr);
+  background: var(--bg-clr);
 }
