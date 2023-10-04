@@ -1,11 +1,11 @@
 import React from 'react'
 import Header from '../Components/Header'
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
   return (
-    <div>
-        <Header/>
-    </div>
+    <>
+      <Header />
+    </>
   )
 }
 
