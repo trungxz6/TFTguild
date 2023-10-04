@@ -14,7 +14,7 @@ const getOptionColorClasses = ({ selected, disabled }: Partial<OptionOwnerState<
     if (selected) {
       classes += ' bg-[#227AAD] text-[#E8F1F7] text-sm hover:bg-[#227AAD]'
     } else {
-      classes += ' hover:bg-[#123040] hover:text-[#E8F1F7] text-sm'
+      classes += ' hover:bg-[#123040] hover:text-[#E8F1F7] text-sm active:bg-[#227AAD]'
     }
   }
   return classes
@@ -27,7 +27,7 @@ const Option = React.forwardRef<HTMLLIElement, OptionProps<number>>((props, ref)
       {...props}
       slotProps={{
         root: ({ selected, disabled }) => ({
-          className: `list-none px-[12px] cursor-default last-of-type:border-b-0 w-[100px] h-[40px] text-sm flex items-center ${getOptionColorClasses(
+          className: `last:border-b-[#123040] border-y-transparent border-x-[#123040] border-solid border list-none px-[12px] cursor-default w-[100px] h-[40px] text-sm flex items-center ${getOptionColorClasses(
             {
               selected,
               disabled,
